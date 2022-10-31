@@ -14,4 +14,6 @@ This system will consist of a free web platform that will offer users a lending 
 
 ## Milestone 0 - Create and configurate repo
 
+A document has been created in order to explain the creation of the repository, the ssh key generation and some usefull commands to start with the git command line. You can see the documentation [here](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone0/docs/milestone0.md).
+
 
