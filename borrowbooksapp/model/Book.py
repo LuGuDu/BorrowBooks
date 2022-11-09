@@ -39,5 +39,5 @@ class Book:
         self.publisher = publisher
 
     def to_string(self):
-        return "Book [id: " + self.isbn + ", title: " + self.title + ", author: " + self.author +", publisher: " + self.publisher + "]"
+        return "Book [isbn: " + self.isbn + ", title: " + self.title + ", author: " + self.author +", publisher: " + self.publisher + "]"
     

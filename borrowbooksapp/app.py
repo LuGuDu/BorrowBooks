@@ -1,6 +1,5 @@
 from flask import Flask, request
 from flask_pymongo import PyMongo
-import json
 import controllers.BookController as book_controller
 
 
