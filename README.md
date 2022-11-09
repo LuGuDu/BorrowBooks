@@ -32,3 +32,5 @@ The milestones that have been created are the following:
  - [Milestone 4 - Finished project](https://github.com/LuGuDu/BorrowBooks/milestone/5)
 
 For the correct development of each milestone, a series of user stories have been defined for each one. Thus, for a milestone to be considered completed, all the user stories created must have been completed. Each user story responds to a functionality that a user requires from the application.
+
+In addition, a Python project has been initialized using the Flask framework for the Backend development. React and Bootstrap will be used for the Frontend. As for the persistence it will be achieved with MongoDB Atlas, a cloud service. So some classes have been added to form the main skeleton of the tasks corresponding to milestone 1 for the management of the books.
