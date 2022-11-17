@@ -105,6 +105,9 @@ def search_by(data, mongo):
     else:
         return_list = book_dao.get_by_publisher(mongo, search_data)
 
+    for book in return_list:
+        book['_id'] = str(book['_id'])
+
     return return_list
 
 

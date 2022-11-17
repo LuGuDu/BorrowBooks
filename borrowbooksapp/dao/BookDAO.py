@@ -25,17 +25,17 @@ class BookDAO:
 
     def get_by_title(self, mongo, title):
         """Returns all the books with same title"""
-        mongo.books.find({"title": title}, sort=[("author", -1)])
+        return list(mongo.books.find({"title": {"$regex" : title, "$options": "i"}}, sort=[("author", -1)]))
 
 
     def get_by_author(self, mongo, author):
         """Returns all the books with same author"""
-        mongo.books.find({"author": author}, sort=[("title", -1)])
+        return list(mongo.books.find({"author": {"$regex" : author, "$options": "i"}}, sort=[("author", -1)]))
 
 
     def get_by_publisher(self, mongo, publisher):
         """Returns all the books with same publisher"""
-        mongo.books.find({"publisher": publisher}, sort=[("title", -1)])
+        return list(mongo.books.find({"publisher": {"$regex" : publisher, "$options": "i"}}, sort=[("publisher", -1)]))
 
 
     def update(self, mongo, book):
