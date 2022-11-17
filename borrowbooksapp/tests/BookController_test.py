@@ -21,6 +21,24 @@ def test_success_create_book():
 
 
 @pytest.mark.run(order=2)
+def test_success_update_book():
+    data = {
+                "isbn": "0828", 
+                "title": "La celestina", 
+                "author": "Fernando de rojas",
+                "publisher": "DeBolsillo"
+            }
+
+    response = requests.put(
+            "http://127.0.0.1:5000/update_book",
+            data=json.dumps(data),
+            headers={"Content-Type": "application/json"},
+        )
+    
+    assert response.status_code == 200
+
+
+@pytest.mark.run(order=2)
 def test_success_get_books():
     response = requests.get("http://127.0.0.1:5000/get_books")
     assert response.status_code == 200

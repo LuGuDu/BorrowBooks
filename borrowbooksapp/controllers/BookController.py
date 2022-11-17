@@ -5,6 +5,7 @@ from model.Book import Book
 from dao.BookDAO import BookDAO
 
 from exceptions.BookNoExistsException import BookNoExistsException
+from exceptions.BookAlreadyExistsException import BookAlreadyExistsException
 
 book_dao = BookDAO()
 
@@ -24,6 +25,13 @@ def create_book(data, mongo):
     title = json.loads(data.decode())["title"]
     author = json.loads(data.decode())["author"]
     publisher = json.loads(data.decode())["publisher"]
+
+    try:
+        if book_dao.get_by_isbn(mongo, isbn) is not None:
+            raise BookAlreadyExistsException
+    except BookAlreadyExistsException:
+        print("Book already exists")
+        abort(500, "Book already exists")
 
     book = Book(isbn, title, author, publisher)
     book_dao.save(mongo, book.get_json())
@@ -50,7 +58,7 @@ def update_book(data, mongo):
     isbn = book_json["isbn"]
     title = book_json["title"]
     author = book_json["author"]
-    publisher = book_json["publiser"]
+    publisher = book_json["publisher"]
 
     book = book_dao.get_by_isbn(mongo, isbn)
 
@@ -96,6 +104,8 @@ def search_by(data, mongo):
         return_list = book_dao.get_by_author(mongo, search_data)
     else:
         return_list = book_dao.get_by_publisher(mongo, search_data)
+
+    return return_list
 
 
 
