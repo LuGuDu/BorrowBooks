@@ -20,7 +20,7 @@ class BookDAO:
 
     def get_by_isbn(self, mongo, isbn):
         """Returns all the books with same isbn"""
-        mongo.books.find_one({"isbn": isbn})
+        return mongo.books.find_one({"isbn": isbn})
 
 
     def get_by_title(self, mongo, title):
