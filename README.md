@@ -41,5 +41,5 @@ During [Milestone 1 - Books management](https://github.com/LuGuDu/BorrowBooks/mi
  - [Choise and  use of a Task manager](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/task_manager.md)
  - [Choise and use of an Assert's library](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/assert_library.md)
  - [Choise and use of a Test framework](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/test_framework.md)
- - [Code advance](https://github.com/LuGuDu/BorrowBooks/milestone/5)
+ - [Code advance](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/code_advance.md)
 
