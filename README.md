@@ -16,8 +16,6 @@ This system will consist of a free web platform that will offer users a lending 
 
 A document has been created in order to explain the creation of the repository, the ssh key generation and some usefull commands to start with the git command line. You can see the documentation [here](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone0/docs/milestone0.md).
 
-Issues created: [#1](https://github.com/LuGuDu/BorrowBooks/issues/1), [#2](https://github.com/LuGuDu/BorrowBooks/issues/2), [#3](https://github.com/LuGuDu/BorrowBooks/issues/3)
-
 ***
 
 ## 3. Project planification
@@ -34,3 +32,14 @@ The milestones that have been created are the following:
 For the correct development of each milestone, a series of user stories have been defined for each one. Thus, for a milestone to be considered completed, all the user stories created must have been completed. Each user story responds to a functionality that a user requires from the application.
 
 In addition, a Python project has been initialized using the Flask framework for the Backend development. React and Bootstrap will be used for the Frontend. As for the persistence it will be achieved with MongoDB Atlas, a cloud service. So some classes have been added to form the main skeleton of the tasks corresponding to milestone 1 for the management of the books.
+
+***
+
+## 4. Testing
+
+During [Milestone 1 - Books management](https://github.com/LuGuDu/BorrowBooks/milestone/2) of the application development, a series of tasks related to testing have been carried out in order to verify that the implemented code works correctly. In addition, these tests have been automated by means of a task manager. For more details please refer to the following points:
+ - [Choise and  use of a Task manager](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/task_manager.md)
+ - [Choise and use of an Assert's library](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/assert_library.md)
+ - [Choise and use of a Test framework](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/test_framework.md)
+ - [Code advance](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/code_advance.md)
+

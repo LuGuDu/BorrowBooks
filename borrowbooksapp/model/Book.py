@@ -1,14 +1,16 @@
 class Book:
 
-    def __init__ (self, isbn, name, publisher):
+    def __init__ (self, isbn, title, author, publisher):
         self.isbn = isbn
-        self.name = name
+        self.title = title
+        self.author = author
         self.publisher = publisher
 
     def get_json(self):
         return {
             'isbn': self.isbn,
-            'name': self.name,
+            'title': self.title,
+            'author': self.author,
             'publisher': self.publisher
         }
 
@@ -18,11 +20,17 @@ class Book:
     def set_isbn(self, isbn):
         self.isbn = isbn
 
-    def get_name(self):
-        return self.name
+    def get_author(self):
+        return self.author
+    
+    def set_author(self, author):
+        self.author = author
 
-    def set_name(self, name):
-        self.name = name
+    def get_title(self):
+        return self.title
+
+    def set_title(self, title):
+        self.title = title
 
     def get_publisher(self):
         return self.publisher
@@ -31,5 +39,5 @@ class Book:
         self.publisher = publisher
 
     def to_string(self):
-        return "Book [id: " + self.isbn + ", name: " + self.name + ", publisher: " + self.publisher + "]"
+        return "Book [isbn: " + self.isbn + ", title: " + self.title + ", author: " + self.author +", publisher: " + self.publisher + "]"
     

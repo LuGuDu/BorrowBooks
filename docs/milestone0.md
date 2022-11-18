@@ -1,4 +1,4 @@
-# 🚀 Milestone 0 - Repository creation 🚀
+# 🚀 Repository creation 🚀
 
 ---
 
