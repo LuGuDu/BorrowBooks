@@ -40,6 +40,6 @@ In addition, a Python project has been initialized using the Flask framework for
 During [Milestone 1 - Books management](https://github.com/LuGuDu/BorrowBooks/milestone/2) of the application development, a series of tasks related to testing have been carried out in order to verify that the implemented code works correctly. In addition, these tests have been automated by means of a task manager. For more details please refer to the following points:
  - [Choise and  use of a Task manager](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/task_manager.md)
  - [Choise and use of an Assert's library](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/assert_library.md)
- - [Choise and use of a Test framework](https://github.com/LuGuDu/BorrowBooks/milestone/4)
+ - [Choise and use of a Test framework](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/test_framework.md)
  - [Code advance](https://github.com/LuGuDu/BorrowBooks/milestone/5)
 
