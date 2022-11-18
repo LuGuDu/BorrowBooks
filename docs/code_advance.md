@@ -1,5 +1,8 @@
+# ✍️ Code advance ✍️
 
-For the development of the first milestone, the following classes have been created or modified:
+---
+
+For the development of the [Milestone 1](https://github.com/LuGuDu/BorrowBooks/milestone/2), the following classes have been created or modified:
 
 - [App.py](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/borrowbooksapp/app.py)
 - Controllers:
