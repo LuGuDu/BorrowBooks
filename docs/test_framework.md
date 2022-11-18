@@ -42,3 +42,5 @@ To run pytest you only need to execute the command followed by the file or direc
 
 Result after running the developed tests:
 
+<img src="https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/resources/testing.JPG" alt="Pytest execution result" style="width:600px;"/>
+
