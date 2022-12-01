@@ -43,3 +43,11 @@ During [Milestone 1 - Books management](https://github.com/LuGuDu/BorrowBooks/mi
  - [Choise and use of a Test framework](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/test_framework.md)
  - [Code advance](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/code_advance.md)
 
+***
+
+## 5. Dockerize testing
+
+In this task the tests performed in the previous task have been put inside a Docker container so that it can be executed completely independent of the machine where the server is running. For more details, please read the following post:
+ - [Testing with docker](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/test_docker.md)
+
+
