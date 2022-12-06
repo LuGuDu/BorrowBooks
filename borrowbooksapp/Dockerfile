@@ -1,9 +1,9 @@
 FROM python
 
-COPY /testingDocker /test
+COPY /testingDocker /tests
 
 RUN pip install pytest && pip install requests
 
-WORKDIR /test
+WORKDIR /tests
 
 CMD ["make"]
