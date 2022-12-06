@@ -10,6 +10,7 @@ on:
 
 jobs:
   push_to_registries:
+    if: github.event.pull_request.merged == true
     name: Push Docker image to multiple registries
     runs-on: ubuntu-latest
     permissions:
