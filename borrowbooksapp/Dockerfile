@@ -1,6 +1,6 @@
 FROM python
 
-RUN pip install pytest && pip install requests
+RUN pip install requests && pip install pytest
 
 COPY /testingDocker /tests
 
