@@ -3,7 +3,7 @@ name: Publish Docker image
 on:
   push:
     paths:
-      - 'borrowbooksapp/Dockerfile'
+      - 'Dockerfile'
 
 jobs:
   push_to_registries:
