@@ -1,8 +1,8 @@
 FROM python
 
-COPY /testingDocker /tests
-
 RUN pip install pytest && pip install requests
+
+COPY /testingDocker /tests
 
 WORKDIR /tests
 
