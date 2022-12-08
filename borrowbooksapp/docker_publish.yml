@@ -1,16 +1,12 @@
 name: Publish Docker image
 
 on:
-  pull_request:
-    branches:
-      -main
-    types: [closed]
+  push:
     paths:
-      -'Dockerfile'
+      - Dockerfile
 
 jobs:
   push_to_registries:
-    if: github.event.pull_request.merged == true
     name: Push Docker image to multiple registries
     runs-on: ubuntu-latest
     permissions:
@@ -40,6 +36,8 @@ jobs:
           images: |
             lugudu/borrowbooks_testing
             ghcr.io/${{ github.repository }}
+          tags: |
+            latest
       
       - name: Build and push Docker images
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
