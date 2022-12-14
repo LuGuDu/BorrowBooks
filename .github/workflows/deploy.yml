@@ -35,12 +35,7 @@ jobs:
           path: |
             . 
             !venv/
+      - name: run docker
+        run: docker push lugudu/borrowbooks_testing:latest && docker run borrowbooks_testing:latest
 
-  compile:
-    needs: build
-    name: Compile site assets
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run the build process with Docker
-        uses: docker://lugudu/borrowbooks_testing:latest
 
