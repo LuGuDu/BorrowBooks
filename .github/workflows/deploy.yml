@@ -11,7 +11,7 @@ jobs:
         python-version: [3.8]
     steps:
       - uses: actions/checkout@master
-      - name: Initialize Python 3.8
+      - name: Initialize Python 3.7
         uses: actions/setup-python@v1
         with:
           python-version: ${{matrix.python-version}}
@@ -20,6 +20,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
   container-test-job:
+    needs: deploy
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/owner/image
