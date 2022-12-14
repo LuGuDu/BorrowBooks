@@ -36,3 +36,14 @@ jobs:
           path: |
             . 
             !venv/
+
+  container-test-job:
+    needs: deploy
+    runs-on: ubuntu-latest
+    container:
+      image: |
+        lugudu/borrowbooks_testing
+        ghcr.io/${{ github.repository }}
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
