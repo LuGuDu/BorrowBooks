@@ -37,6 +37,7 @@ jobs:
             !venv/
 
   compile:
+    needs: build
     name: Compile site assets
     runs-on: ubuntu-latest
     steps:
