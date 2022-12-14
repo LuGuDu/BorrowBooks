@@ -1,6 +1,5 @@
 name: Deploy
 
-
 on:
   push:
     branches:
@@ -17,18 +16,18 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
-          python-version: '3.9'
+          python-version: "3.9"
 
       - name: Create and start virtual environment
         run: |
           python -m venv venv
           source venv/bin/activate
-      
+
       - name: Install dependencies
-        run: pip install -r requirements.txt
-        
+        run: pip install -r borrowbooksapp/requirements.txt
+
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-      
+
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
@@ -37,13 +36,9 @@ jobs:
             . 
             !venv/
 
-  container-test-job:
-    needs: deploy
+  compile:
+    name: Compile site assets
     runs-on: ubuntu-latest
-    container:
-      image: |
-        lugudu/borrowbooks_testing
-        ghcr.io/${{ github.repository }}
-      credentials:
-        username: ${{ github.actor }}
-        password: ${{ secrets.github_token }}
+    steps:
+      - name: Run the build process with Docker
+        uses: docker://lugudu/borrowbooks_testing
