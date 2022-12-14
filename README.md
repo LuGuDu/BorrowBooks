@@ -56,3 +56,5 @@ In this task the tests performed in the previous task have been put inside a Doc
 
 ## 6. Continuous integration
 
+Working in it...
+
