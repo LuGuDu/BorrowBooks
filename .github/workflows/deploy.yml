@@ -40,9 +40,6 @@ jobs:
     needs: build
     name: Compile site assets
     runs-on: ubuntu-latest
-    steps:
-      - name: Run the build process with Docker
-        uses: docker://lugudu/borrowbooks_testing
-        with:
-          tags: |
-            latest
+    container:
+      image: lugudu/borrowbooks_testing:latest
+
