@@ -28,6 +28,8 @@ jobs:
       
       - name: echo workspace
         run: echo $GITHUB_WORKSPACE
+      - name: run server
+        run: python borrowbooksapp/app.py
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
