@@ -36,6 +36,6 @@ jobs:
             . 
             !venv/
       - name: run docker
-        run: docker push docker.io/lugudu/borrowbooks_testing:latest && docker run borrowbooks_testing:latest
+        run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run borrowbooks_testing:latest
 
 
