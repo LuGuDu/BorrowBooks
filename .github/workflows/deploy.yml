@@ -25,6 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests && pip install pytest
+      
+      - name: echo workspace
+        run: echo $GITHUB_WORKSPACE
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -35,7 +38,6 @@ jobs:
           path: |
             . 
             !venv/
-      - name: run docker
-        run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
+
 
 
