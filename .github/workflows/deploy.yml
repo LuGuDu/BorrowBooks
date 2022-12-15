@@ -17,10 +17,10 @@ jobs:
         with:
           python-version: "3.9"
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
+      #- name: Create and start virtual environment
+      #  run: |
+      #    python -m venv venv
+      #    source venv/bin/activate
 
       - name: Install dependencies
         run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo && pip install urllib3
@@ -31,7 +31,8 @@ jobs:
       - name: run server
         run: python borrowbooksapp/app.py & 
 
-
+      #- name: asfd
+      #  run: sudo systemctl start docker
 
       - name: testing
         run:  docker run lugudu/borrowbooks_testing:latest
