@@ -32,7 +32,7 @@ jobs:
         run: python borrowbooksapp/app.py & 
 
       - name: asfd
-        run: apt-get install systemctl
+        run: sudo apt-get install systemctl
 
       - name: testing
         run: sudo sysctl -w vm.max_map_count=262144 && sudo systemctl start elasticsearch.service && docker run lugudu/borrowbooks_testing:latest
