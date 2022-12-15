@@ -24,7 +24,7 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: pip install requests && pip install pytest
+        run: pip install requests && pip install pytest && pip install -r borrowbooksapp/requirements.txt
       
       - name: echo workspace
         run: echo $GITHUB_WORKSPACE
