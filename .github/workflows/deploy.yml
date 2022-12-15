@@ -31,8 +31,8 @@ jobs:
       - name: run server
         run: python borrowbooksapp/app.py & 
 
-      #- name: asfd
-      #  run: sudo systemctl start docker
+      - name: asfd
+        run: netstat -lt
 
       - name: testing
         run:  docker run lugudu/borrowbooks_testing:latest
