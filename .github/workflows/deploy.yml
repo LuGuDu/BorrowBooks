@@ -25,10 +25,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo
-      - name: echo workspace
-        run: echo $GITHUB_WORKSPACE
+
       - name: run server
         run: python borrowbooksapp/app.py &
+  test:
+    runs-on: ubuntu-latest
+    steps:
       - name: run docker
         run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
 
