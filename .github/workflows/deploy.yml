@@ -31,11 +31,11 @@ jobs:
       - name: run server
         run: python borrowbooksapp/app.py & 
 
-      - name: asfd
-        run: sudo apt-get install systemctl
+      #- name: asfd
+      #  run: sudo apt-get install systemctl && sudo sysctl -w vm.max_map_count=262144 && sudo systemctl start elasticsearch.service
 
       - name: testing
-        run: sudo sysctl -w vm.max_map_count=262144 && sudo systemctl start elasticsearch.service && docker run lugudu/borrowbooks_testing:latest
+        run:  docker run lugudu/borrowbooks_testing:latest
 
       #- name: run docker
       #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
