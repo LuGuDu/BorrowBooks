@@ -35,7 +35,7 @@ jobs:
         run: netstat -lt
 
       - name: testing
-        run:  docker run --add-host=host.docker.internal:host-gateway -p 5000:5000 lugudu/borrowbooks_testing:latest 
+        run:  docker run lugudu/borrowbooks_testing:latest 
 
       #- name: run docker
       #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
