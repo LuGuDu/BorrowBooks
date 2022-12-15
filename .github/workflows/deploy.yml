@@ -23,7 +23,7 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo
+        run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo && pip install urllib
 
       - name: pull docker
         run: docker pull docker.io/lugudu/borrowbooks_testing:latest
