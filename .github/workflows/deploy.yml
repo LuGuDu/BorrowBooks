@@ -32,7 +32,7 @@ jobs:
         run: python borrowbooksapp/app.py & 
 
       - name: testing
-        run: sudo sysctl -w vm.max_map_count=262144 && sudo systctl start elasticsearch.service && docker run lugudu/borrowbooks_testing:latest
+        run: sudo sysctl -w vm.max_map_count=262144 && sudo sysctl start elasticsearch.service && docker run lugudu/borrowbooks_testing:latest
 
       #- name: run docker
       #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
