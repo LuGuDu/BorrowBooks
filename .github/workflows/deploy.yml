@@ -24,8 +24,7 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: pip install requests && pip install pytest && pip install -r borrowbooksapp/requirements.txt
-      
+        run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo
       - name: echo workspace
         run: echo $GITHUB_WORKSPACE
       - name: run server
@@ -40,6 +39,7 @@ jobs:
           path: |
             . 
             !venv/
-
+      #- name: run docker
+      #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
 
 
