@@ -29,6 +29,7 @@ jobs:
         run: echo $GITHUB_WORKSPACE
   run:
     needs: build
+    runs-on: ubuntu-latest
     steps:
       - name: run server
         run: python borrowbooksapp/app.py
@@ -36,6 +37,7 @@ jobs:
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
   testing:
     needs: run
+    runs-on: ubuntu-latest
     steps:
       - name: run docker
         run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
