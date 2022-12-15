@@ -27,19 +27,17 @@ jobs:
         run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo
       - name: echo workspace
         run: echo $GITHUB_WORKSPACE
+  run:
+    needs: build
+    steps:
       - name: run server
         run: python borrowbooksapp/app.py
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-
-      - name: Upload artifact for deployment jobs
-        uses: actions/upload-artifact@v2
-        with:
-          name: python-app
-          path: |
-            . 
-            !venv/
-      #- name: run docker
-      #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
+  testing:
+    needs: run
+    steps:
+      - name: run docker
+        run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
 
 
