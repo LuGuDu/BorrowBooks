@@ -26,7 +26,7 @@ jobs:
         run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo
 
       - name: run server
-        run: python borrowbooksapp/app.py && docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
+        run: python borrowbooksapp/app.py & && docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
 
       #- name: run docker
       #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
