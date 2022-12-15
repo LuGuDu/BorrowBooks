@@ -30,8 +30,9 @@ jobs:
 
       - name: run server
         run: python borrowbooksapp/app.py & 
+      
       - name: testing
-        run: docker run lugudu/borrowbooks_testing:latest
+        run: netstat -anp
 
       #- name: run docker
       #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
