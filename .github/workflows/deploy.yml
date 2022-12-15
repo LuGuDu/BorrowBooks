@@ -31,8 +31,8 @@ jobs:
       - name: run server
         run: python borrowbooksapp/app.py & 
 
-      #- name: asfd
-      #  run: sudo apt-get install systemctl && sudo sysctl -w vm.max_map_count=262144 && sudo systemctl start elasticsearch.service
+      - name: asfd
+        run: sudo systemctl start docker
 
       - name: testing
         run:  docker run lugudu/borrowbooks_testing:latest
