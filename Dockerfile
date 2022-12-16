@@ -2,8 +2,8 @@ FROM python
 
 RUN pip install flask && pip install pytest
 
-COPY borrowbooksapp/testing /tests
+COPY .. /borrowbooksapp
 
-WORKDIR /tests
+WORKDIR /testing/tests
 
 CMD ["make"]
