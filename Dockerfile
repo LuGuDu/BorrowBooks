@@ -4,6 +4,6 @@ RUN pip install flask && pip install pytest
 
 COPY .. /app
 
-WORKDIR /borrowbookspp/testing
+WORKDIR /app/borrowbookspp/testing
 
 CMD ["make"]
