@@ -52,3 +52,9 @@ In this task the tests performed in the previous task have been put inside a Doc
  - [Automated docker](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/automated_docker.md)
 
 
+***
+
+## 6. Continuous integration
+
+Working in it...
+

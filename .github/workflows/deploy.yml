@@ -1,0 +1,30 @@
+name: Testing CI
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python version
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: pip install pytest && pip install flask && pip install flask_pymongo
+
+      - name: pull docker
+        run: docker pull docker.io/lugudu/borrowbooks_testing:latest
+
+      - name: testing
+        run:  docker run lugudu/borrowbooks_testing:latest 
+
+
+

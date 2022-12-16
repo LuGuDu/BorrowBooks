@@ -1,9 +1,9 @@
 FROM python
 
-RUN pip install requests && pip install pytest
+RUN pip install flask && pip install flask_pymongo && pip install pytest
 
-COPY borrowbooksapp/testingDocker /tests
+COPY .. /app
 
-WORKDIR /tests
+WORKDIR /app/borrowbooksapp/testing
 
 CMD ["make"]
