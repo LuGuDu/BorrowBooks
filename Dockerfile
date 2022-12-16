@@ -2,7 +2,7 @@ FROM python
 
 RUN pip install requests && pip install pytest
 
-COPY borrowbooksapp/testingDocker /tests
+COPY borrowbooksapp/testing /tests
 
 WORKDIR /tests
 
