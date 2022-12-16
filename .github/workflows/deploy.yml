@@ -1,4 +1,4 @@
-name: Deploy
+name: Testing CI
 
 on:
   push:
@@ -17,11 +17,6 @@ jobs:
         with:
           python-version: "3.9"
 
-      #- name: Create and start virtual environment
-      #  run: |
-      #    python -m venv venv
-      #    source venv/bin/activate
-
       - name: Install dependencies
         run: pip install pytest && pip install flask && pip install flask_pymongo
 
@@ -31,7 +26,5 @@ jobs:
       - name: testing
         run:  docker run lugudu/borrowbooks_testing:latest 
 
-      #- name: run docker
-      #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
 
 
