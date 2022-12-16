@@ -1,6 +1,6 @@
 FROM python
 
-RUN pip install requests && pip install pytest
+RUN pip install flask && pip install pytest
 
 COPY borrowbooksapp/testing /tests
 
