@@ -23,19 +23,13 @@ jobs:
       #    source venv/bin/activate
 
       - name: Install dependencies
-        run: pip install requests && pip install pytest && pip install flask && pip install flask_pymongo && pip install urllib3
+        run: pip install pytest && pip install flask
 
       - name: pull docker
         run: docker pull docker.io/lugudu/borrowbooks_testing:latest
 
-      - name: run server
-        run: python borrowbooksapp/app.py & 
-
-      - name: asfd
-        run: netstat -lt
-
       - name: testing
-        run:  docker run --add-host host.docker.internal:host-gateway lugudu/borrowbooks_testing:latest 
+        run:  docker run lugudu/borrowbooks_testing:latest 
 
       #- name: run docker
       #  run: docker pull docker.io/lugudu/borrowbooks_testing:latest && docker run lugudu/borrowbooks_testing:latest
