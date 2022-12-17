@@ -56,5 +56,6 @@ In this task the tests performed in the previous task have been put inside a Doc
 
 ## 6. Continuous integration
 
-Working in it...
+The next step is to use some technology to achieve continuous integration in our project. Specifically, we want to launch code tests every time important changes are made. For more information read the following post:
+ - [Continuous integration](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/continuous_integration.md)
 
