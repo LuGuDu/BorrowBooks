@@ -1,6 +1,9 @@
 from flask import Flask, request
 from flask_pymongo import PyMongo
 import controllers.BookController as book_controller
+import controllers.LoanController as loan_controller
+
+import logging
 
 
 app = Flask(__name__)
@@ -9,6 +12,10 @@ MONGO_STRING = "mongodb+srv://borrowbooks:tOKlwpoiQan7Nt60@cluster0.mzdds1i.mong
 app.config["MONGO_URI"] = MONGO_STRING
 mongodb_client = PyMongo(app)
 mongo = mongodb_client.db
+
+logging.basicConfig(filename='api.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+
+logger = logging.getLogger()
 
 
 @app.route('/get_books', methods=['GET'])
@@ -63,6 +70,43 @@ def search_books():
     if request.method == 'GET':
         books_list = book_controller.search_by(request.data, mongo)
         return {"message": 200, "book_list": books_list}
+    return {"message": 500}
+
+
+@app.route('/get_loans', methods=['GET'])
+def get_loans():
+    """Method to obtain a list of all loans"""
+    if request.method == "GET":
+        loans_list = loan_controller.get_loans(mongo)
+        return {"message": 200, "loans": loans_list}
+    return {"message": 500}
+
+
+@app.route('/get_loan', methods=['GET'])
+def get_loan():
+    """Method to obtain a loan"""
+    if request.method == "GET":
+        loan = loan_controller.get_loan(request.data, mongo)
+        return {"message": 200, "loan": loan}
+    return {"message": 500}
+
+
+@app.route('/create_loan', methods=['POST'])
+def create_loan():
+    """Method to create a new loan"""
+    if request.method == "POST":
+        loan_controller.create_loan(request.data, mongo)
+        return {"message": 200}
+
+    return {"message": 500}
+
+
+@app.route('/complete_loan', methods=['DELETE'])
+def complete_loan():
+    """Method to complete a loan"""
+    if request.method == 'DELETE':
+        loan_controller.complete_loan(request.data, mongo)
+        return {"message": 200}
     return {"message": 500}
 
 
