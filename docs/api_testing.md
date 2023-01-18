@@ -36,5 +36,5 @@ Tests have been written to test the functionality of MILESTONE 1, so that the co
 
 To run them and see that they work satisfactorily, we run the command:  `$pytest testingAPI/test/` in the folder where our tests are located or using the Make file. We get the following result after the execution:
 
-<img src="https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/resources/testing2.JPG" alt="Pytest execution result" style="width:600px;"/>
+<img src="https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/resources/testing2.JPG" alt="Pytest execution result" style="width:700px;"/>
 

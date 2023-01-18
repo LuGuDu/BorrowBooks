@@ -68,4 +68,4 @@ During [Milestone 2 - Borrow service](https://github.com/LuGuDu/BorrowBooks/mile
  - [API design](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_design.md)
  - [API Logger](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_logger.md)
  - [API testing](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_testing.md)
- - [Code advance](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/code_advance2.md)
+ - [Code advance 2](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/code_advance2.md)
