@@ -59,3 +59,13 @@ In this task the tests performed in the previous task have been put inside a Doc
 The next step is to use some technology to achieve continuous integration in our project. Specifically, we want to launch code tests every time important changes are made. For more information read the following post:
  - [Continuous integration](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone1/docs/continuous_integration.md)
 
+ ***
+
+## 7. Design and testing of a microservice
+
+During [Milestone 2 - Borrow service](https://github.com/LuGuDu/BorrowBooks/milestone/3) of the application development, a series of tasks related to the api design have been carried out. For more details please refer to the following points:
+ - [Choosing a Framework](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_framework.md)
+ - [API design](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_design.md)
+ - [API Logger](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_logger.md)
+ - [API testing](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_testing.md)
+ - [Code advance 2](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/code_advance2.md)
