@@ -8,12 +8,13 @@ import logging
 
 app = Flask(__name__)
 
-MONGO_STRING = "mongodb+srv://borrowbooks:tOKlwpoiQan7Nt60@cluster0.mzdds1i.mongodb.net/borrowbooksdb"
+#MONGO_STRING = "mongodb+srv://borrowbooks:tOKlwpoiQan7Nt60@cluster0.mzdds1i.mongodb.net/borrowbooksdb"
+MONGO_STRING = "mongodb://host.docker.internal:27017/borrowbooksdb"
 app.config["MONGO_URI"] = MONGO_STRING
 mongodb_client = PyMongo(app)
 mongo = mongodb_client.db
 
-logging.basicConfig(filename='api.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+logging.basicConfig(filename='logs/api.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 
 logger = logging.getLogger()
 
@@ -111,4 +112,4 @@ def complete_loan():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')

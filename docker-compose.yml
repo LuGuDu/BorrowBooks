@@ -1,0 +1,22 @@
+version: '3'
+services:
+  flask_app:
+    image: server
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./logs:/app/borrowbooksapp/logs"
+    environment:
+      - MONGO_URI=mongodb://localhost:27017/borrowbooksdb
+    depends_on:
+      - mongo
+
+  sonarqube:
+    image: sonarqube
+    ports:
+      - "9000:9000"
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
