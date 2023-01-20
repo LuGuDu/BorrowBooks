@@ -82,4 +82,4 @@ As a detail, because the logs are recorded inside the API container, a line has 
 
 If we execute the make command, the final result is going to be the deployment of the containers:
 
-<img src="https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/resources/containers.JPG" alt="docker-compose execution result"/>
+<img src="https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/resources/containers.png" alt="docker-compose execution result"/>
