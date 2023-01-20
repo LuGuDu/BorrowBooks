@@ -69,3 +69,13 @@ During [Milestone 2 - Borrow service](https://github.com/LuGuDu/BorrowBooks/mile
  - [API Logger](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_logger.md)
  - [API testing](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/api_testing.md)
  - [Code advance 2](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/code_advance2.md)
+
+  ***
+
+## 8. Service composition with docker-compose
+
+During this task, a composition of different services has been made, which are orchestrated thanks to a docker-compose.yml file. The objective was to be able to separate the different services deployed from the machine, so that they can be independent from the host machine. Three services have been created: the API Rest, the database and a SonarQube server for quality measurement.
+
+You can see more information in the following post:
+
+ - [Service composition](https://github.com/LuGuDu/BorrowBooks/blob/LuGuDu-milestone2/docs/service_composition.md)
